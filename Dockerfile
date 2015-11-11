@@ -19,10 +19,10 @@ RUN git clone https://github.com/ezorita/seeq.git && \
     make clean -C zerone/ZeroneRPackage/src
 
 # Add GEM.
-ADD http://downloads.sourceforge.net/project/gemlibrary/gem-library/Binary%20pre-release%202/GEM-binaries-Linux-x86_64-core_i3-20121106-022124.tbz2 /
+ADD http://downloads.sourceforge.net/project/gemlibrary/gem-library/Binary%20pre-release%203/GEM-binaries-Linux-x86_64-core_i3-20130406-045632.tbz2 /
 # md5sum 06de0a815f0cee963ec94321d899042a
-RUN tar -xjf GEM-binaries-Linux-x86_64-core_i3-20121106-022124.tbz2 && \
-    rm GEM-binaries-Linux-x86_64-core_i3-20121106-022124.tbz2
+RUN tar -xjf GEM-binaries-Linux-x86_64-core_i3-20130406-045632.tbz2 && \
+    rm GEM-binaries-Linux-x86_64-core_i3-20130406-045632.tbz2
 
 # Update PATH.
-ENV PATH $PATH:/seeq:/starcode:/zerone:/GEM-binaries-Linux-x86_64-core_i3-20121106-022124
+ENV PATH $PATH:/seeq:/starcode:/zerone:/GEM-binaries-Linux-x86_64-core_i3-20121106-022124/bin
