@@ -1,12 +1,12 @@
 FROM ubuntu:trusty
 
 RUN apt-get update && apt-get install -y \
-    emacs=24.3.1 \
-    gcc=4.8.4 \
-    git=1.9.1 \
-    make=3.81 \
-    r-base=3.2.2 \
-    vim=7.4 \
+    emacs \#=24.3.1 \
+    gcc \#=4.8.4 \
+    git \#=1.9.1 \
+    make \#=3.81 \
+    r-base \#=3.2.2 \
+    vim \#=7.4 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add lab software.
