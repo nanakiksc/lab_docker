@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y \
     gcc=4:4.8.2-1* \
     git=1:1.9.1-1* \
     make=3.81-8.2* \
+    python=2.7.5-5* \
+    python-numpy=1:1.8.2-0* \
     r-base=3* \
     vim=2:7.4.052-1* \
     wget=1.15-1* \
