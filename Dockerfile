@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     git=1:1.9.1-1* \
     make=3.81-8.2* \
     python=2.7.5-5* \
+    python-dev=2.7.5-5* \
     r-base=3* \
     vim=2:7.4.052-1* \
     wget=1.15-1* \
@@ -13,7 +14,10 @@ RUN apt-get update && apt-get install -y \
 
 # Add lab software.
 RUN git clone https://github.com/ezorita/seeq.git && \
-    make -C seeq
+    make -C seeq && \
+    cd seeq && \
+    python setup.py install && \
+    cd ..
 RUN git clone https://github.com/gui11aume/starcode.git && \
     make -C starcode
 RUN git clone https://github.com/gui11aume/zerone.git && \
