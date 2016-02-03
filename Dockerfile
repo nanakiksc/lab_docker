@@ -20,7 +20,7 @@ RUN git clone https://github.com/ezorita/seeq.git && \
     cd ..
 RUN git clone https://github.com/gui11aume/starcode.git && \
     make -C starcode
-RUN git clone https://github.com/gui11aume/zerone.git && \
+RUN git clone https://github.com/nanakiksc/zerone.git && \
     make -C zerone && \
     R CMD INSTALL zerone/ZeroneRPackage && \
     make clean -C zerone/ZeroneRPackage/src
