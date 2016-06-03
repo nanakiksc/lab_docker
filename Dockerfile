@@ -32,5 +32,17 @@ RUN wget -nv http://downloads.sourceforge.net/project/gemlibrary/gem-library/Bin
     rm ${GEM}.tbz2
 # md5sum 06de0a815f0cee963ec94321d899042a
 
-# Update PATH.
-ENV PATH $PATH:/seeq:/starcode:/zerone:/${GEM}/bin
+# Add BWA.
+RUN git clone https://github.com/lh3/bwa.git && \
+    make -C bwa
+
+# Add links to executables.
+ln -s /seeq/seeq /usr/local/bin/
+ln -s /starcode/starcode /usr/local/bin/
+ln -s /zerone/zerone /usr/local/bin/
+ln -s /${GEM}/bin/compute-transcriptome /usr/local/bin/
+ln -s /${GEM}/bin/gem* /usr/local/bin/
+ln -s /${GEM}/bin/gtf-2-junctions /usr/local/bin/
+ln -s /${GEM}/bin/splits-2-junctions /usr/local/bin/
+ln -s /${GEM}/bin/transcriptome-2-genome /usr/local/bin/
+ln -s /bwa/bwa /usr/local/bin/
