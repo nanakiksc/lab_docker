@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     r-base=3* \
     vim=2:7.4.052-1* \
     wget=1.15-1* \
+    exuberant-ctags=1:5.9* \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add lab software.
